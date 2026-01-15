@@ -6,27 +6,48 @@
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-<header>
-    <a href="accueil.html"><img src="../images/logoGTA4.jpg" alt="Logo" class="logo"></a>
-    <nav>
-        <ul class="menu">
-            <li><a href="accueil.html">Accueil</a></li>
-            <li><a href="personnages.html">Personnages</a></li>
-            <li><a href="lieux.html">Lieux</a></li>
-            <li><a href="gameplay.html">Gameplay</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <a href="accueil.html">
+            <img src="../images/logoGTA4.jpg" alt="Logo" class="logo">
+        </a>
+        <nav>
+            <ul class="menu">
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="personnages.html">Personnages</a></li>
+                <li><a href="lieux.html">Lieux</a></li>
+                <li><a href="gameplay.html">Gameplay</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <h2>Le Gameplay dans GTA IV</h2>
-    <h2>Page en cours de développement...</h2>
-</main>
+    <main>
+        <h2>Le Gameplay dans GTA IV</h2>
+        <p>Cliquez sur les images pour obtenir des détails stratégiques sur le jeu.</p>
 
-<footer>
-    <p>© 2026 Rayan Raïk - Site GTA IV</p>
-</footer>
+        <section>
+            <h3>La conduite et les déplacements</h3>
+            <img src="../images/conduite.jpg" alt="Conduite" class="gta-image interactive-img"
+                 onclick="showDetail('La physique des voitures est basée sur une suspension réaliste. Anticipez les freinages !')">
+            
+            <img src="../images/helicoptere.jpg" alt="Hélico" class="gta-image interactive-img"
+                 onclick="showDetail('Les hélicoptères sont parfaits pour voyager rapidement entre les îles.')">
+        </section>
 
-<script src="../js/script.js"></script>
+        <section>
+            <h3>Le système de combat</h3>
+            <img src="../images/combat.jpg" alt="Combat" class="gta-image interactive-img"
+                 onclick="showDetail('Battez-vous pour un maximum de plaisiiiirr')">
+        </section>
+
+        <div id="info-box" class="info-message">
+            Cliquez sur une image pour voir une astuce ici.
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Rayan Raïk - Site GTA IV</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>

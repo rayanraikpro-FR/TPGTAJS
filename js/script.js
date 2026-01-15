@@ -3,36 +3,52 @@ var positionImage = 0;
 var imagePrincipale = document.getElementById("carouselImg");
 
 function allerSuivante() {
-    positionImage = positionImage + 1;
-    if (positionImage == 3) { positionImage = 0; }
-    if (imagePrincipale) { imagePrincipale.src = listeImages[positionImage]; }
+    positionImage++;
+    if (positionImage == 3) positionImage = 0;
+    if (imagePrincipale) imagePrincipale.src = listeImages[positionImage];
 }
 
 function allerPrecedente() {
-    positionImage = positionImage - 1;
-    if (positionImage == -1) { positionImage = 2; }
-    if (imagePrincipale) { imagePrincipale.src = listeImages[positionImage]; }
+    positionImage--;
+    if (positionImage == -1) positionImage = 2;
+    if (imagePrincipale) imagePrincipale.src = listeImages[positionImage];
 }
+
 
 var boutonSuivant = document.getElementById("nextBtn");
 var boutonPrecedent = document.getElementById("prevBtn");
 
-if (boutonSuivant) { boutonSuivant.onclick = allerSuivante; }
-if (boutonPrecedent) { boutonPrecedent.onclick = allerPrecedente; }
-
-
+if (boutonSuivant) { 
+    boutonSuivant.onclick = allerSuivante; 
+}
+if (boutonPrecedent) { 
+    boutonPrecedent.onclick = allerPrecedente; 
+}
 
 function openTab(evt, nomPerso) {
     var tabcontent = document.getElementsByClassName("tab-content");
-    for (var i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
+    for (var i = 0; i < tabcontent.length; i++) tabcontent[i].style.display = "none";
+    
     var tablinks = document.getElementsByClassName("tab-btn");
-    for (var i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-
-    document.getElementById(nomPerso).style.display = "block";
+    for (var i = 0; i < tablinks.length; i++) tablinks[i].className = tablinks[i].className.replace(" active", "");
+    
+    var target = document.getElementById(nomPerso);
+    if (target) target.style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+function filterLieux(zone) {
+    var cartes = document.getElementsByClassName("lieu-card");
+    for (var i = 0; i < cartes.length; i++) {
+        if (zone === "all" || cartes[i].classList.contains(zone)) {
+            cartes[i].style.display = "block";
+        } else {
+            cartes[i].style.display = "none";
+        }
+    }
+}
+
+function showDetail(texte) {
+    var box = document.getElementById("info-box");
+    if (box) box.innerHTML = "<strong>Astuce : </strong>" + texte;
 }

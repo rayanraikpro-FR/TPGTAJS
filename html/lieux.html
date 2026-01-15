@@ -19,8 +19,38 @@
 </header>
 
 <main>
-    <h2>Exploration de Liberty City</h2>
-    <h2>Page en cours de développement...</h2>
+<h2>Exploration de Liberty City</h2>
+    <div class="filter-menu">
+        <button class="btn" onclick="filterLieux('all')">Toute la ville</button>
+        <button class="btn" onclick="filterLieux('nord')">Quartiers Nord</button>
+        <button class="btn" onclick="filterLieux('sud')">Quartiers Sud</button>
+    </div>
+    <div class="lieux-container">
+        <div class="lieu-card nord">
+            <span class="badge danger">Zone Industrielle</span>
+            <h3>Alderney (New Jersey)</h3>
+            <p>Un paysage dominé par les usines et les entrepôts. Terrain des Lost MC.</p>
+            <img src="../images/alderney.jpg" alt="Alderney" class="gta-image">
+        </div>
+        <div class="lieu-card sud">
+            <span class="badge prestige">Centre Financier</span>
+            <h3>Algonquin (Manhattan)</h3>
+            <p>Le cœur battant de Liberty City avec ses gratte-ciels et Star Junction.</p>
+            <img src="../images/algonquin.jpg" alt="Algonquin" class="gta-image">
+        </div>
+        <div class="lieu-card nord">
+            <span class="badge urban">Quartier Nord</span>
+            <h3>Bohan (The Bronx)</h3>
+            <p>Le plus petit arrondissement, urbain et dense.</p>
+            <img src="../images/bohan.jpg" alt="Bohan" class="gta-image">
+        </div>
+        <div class="lieu-card sud">
+            <span class="badge start">Zone de Départ</span>
+            <h3>Dukes (Queens)</h3>
+            <p>Quartiers résidentiels où Niko commence son aventure.</p>
+            <img src="../images/dukes.jpg" alt="Dukes" class="gta-image">
+        </div>
+    </div>
 </main>
 
 <footer>
