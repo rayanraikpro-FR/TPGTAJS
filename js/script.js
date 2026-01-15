@@ -19,3 +19,20 @@ var boutonPrecedent = document.getElementById("prevBtn");
 
 if (boutonSuivant) { boutonSuivant.onclick = allerSuivante; }
 if (boutonPrecedent) { boutonPrecedent.onclick = allerPrecedente; }
+
+
+
+function openTab(evt, nomPerso) {
+    var tabcontent = document.getElementsByClassName("tab-content");
+    for (var i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    var tablinks = document.getElementsByClassName("tab-btn");
+    for (var i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(nomPerso).style.display = "block";
+    evt.currentTarget.className += " active";
+}

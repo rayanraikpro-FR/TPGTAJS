@@ -133,3 +133,16 @@ footer {
     background-color: #00aaff;
     color: white;
 }
+
+.tab-content {
+    display: none; 
+    border: 1px solid #00aaff;
+    padding: 20px;
+    background-color: #111;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

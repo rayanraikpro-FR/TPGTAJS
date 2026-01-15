@@ -20,7 +20,42 @@
 
 <main>
     <h2>Les personnages principaux</h2>
-    <h2>Page en cours de développement...</h2>  
+    <p>Cliquez sur un bouton pour voir les détails :</p>
+
+    <div class="tabs-menu">
+        <button class="tab-btn active" onclick="openTab(event, 'niko')">Niko Bellic</button>
+        <button class="tab-btn" onclick="openTab(event, 'roman')">Roman Bellic</button>
+        <button class="tab-btn" onclick="event, openTab(event, 'dimitri')">Dimitri Rascalov</button>
+        <button class="tab-btn" onclick="openTab(event, 'faustin')">Mikhail Faustin</button>
+    </div>
+
+    <div id="niko" class="tab-content" style="display:block;">
+        <h3>Niko Bellic - Le Vétéran</h3>
+        <p><strong>Origine :</strong> Europe de l'Est (Serbie).</p>
+        <p>Ancien soldat marqué par les horreurs de la guerre, Niko débarque à Liberty City pour fuir son passé et venger une trahison datant de son unité militaire. Il est cynique, froid mais possède un code d'honneur strict. Sa carrure imposante et ses cicatrices témoignent de sa vie de combat.</p>
+        <img src="../images/nikoblc.jpg" alt="Niko" class="gta-image">
+    </div>
+
+    <div id="roman" class="tab-content" style="display:none;">
+        <h3>Roman Bellic - Le Rêveur</h3>
+        <p><strong>Caractéristique :</strong> Propriétaire d'une petite entreprise de taxis à Broker.</p>
+        <p>Cousin de Niko, Roman est l'opposé total : optimiste, naïf et accro aux jeux d'argent. C'est lui qui attire Niko en Amérique en lui promettant une vie de luxe qu'il ne possède pas réellement. Malgré ses mensonges, il est le seul lien affectif fort de Niko dans cette ville hostile.</p>
+        <img src="../images/Roman.jpg" alt="Roman" class="gta-image">
+    </div>
+
+    <div id="dimitri" class="tab-content" style="display:none;">
+        <h3>Dimitri Rascalov - L'Opportuniste</h3>
+        <p><strong>Rôle :</strong> Antagoniste principal et traître.</p>
+        <p>Dimitri est un homme calme, raffiné, mais d'une cruauté absolue. Contrairement aux autres criminels, il utilise la manipulation et la trahison plutôt que la force brute pour grimper les échelons de la pègre russe. Il devient l'ennemi juré de Niko après avoir trahi son propre partenaire.</p>
+        <img src="../images/DimitriRascalov.jpg" alt="Dimitri" class="gta-image">
+    </div>
+
+    <div id="faustin" class="tab-content" style="display:none;">
+        <h3>Mikhail Faustin - Le Parrain Instable</h3>
+        <p><strong>Statut :</strong> Chef de la mafia russe à Broker.</p>
+        <p>Faustin est un homme imprévisible et paranoïaque, souvent sous l'influence de substances qui le rendent extrêmement violent. Autrefois ami proche de Dimitri, sa perte de contrôle menace son empire criminel. Il est le premier grand employeur de Niko dans le monde criminel de Liberty City.</p>
+        <img src="../images/faustin2.jpg" alt="Faustin" class="gta-image">
+    </div>
 </main>
 
 <footer>
